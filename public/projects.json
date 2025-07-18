@@ -3,49 +3,56 @@
     "name": "Xpyre, Grocery Expiration Management - iOS App",
     "description": "Built a mobile app to manage grocery expiration dates, using Swift and UIKit. Practiced responsive UI with UITableView and applied OOP for scalable inventory management. Tested expiration logic for reliability across sessions.",
     "date": "May - June 2025",
-    "link": "",
-    "techStack": ["Swift", "API Integration", "UIKit", "XCTest"]
+    "link": "https://github.com/lindsym/xpyre",
+    "techStack": ["Swift", "API Integration", "UIKit", "XCTest"],
+    "img": "/photos/xpyre.jpg"
   },
   {
     "name": "Audio Processing for Tinnitus - Full-Stack Website",
     "description": "Created a web tool for tailored audio therapy using Express.js and Firebase. Enabled real-time streaming with notch filters and documented APIs for long-term scalability and teammate support.",
     "date": "Jan - May 2025",
-    "link": "",
-    "techStack": ["Vercel", "Express.js", "Firebase Auth"]
+    "link": "https://hearingheroes.vercel.app/",
+    "techStack": ["Vercel", "Express.js", "Firebase Auth"],
+    "img": "/photos/harmonyHub.jpg"
   },
   {
     "name": "Skincare Education - Full-Stack Website",
     "description": "Engineered a Node.js reverse proxy to enable Azure OAuth login. Used MongoDB for fast data handling, leading to 50% faster load times. Led a 4-person team using Git across development sprints.",
     "date": "Nov - Dec 2024",
-    "link": "",
-    "techStack": ["Express.js", "React", "MongoDB", "OAuth", "Bootstrap"]
+    "link": "https://cle-skincare-wiki-server.onrender.com/",
+    "techStack": ["Express.js", "React", "MongoDB", "OAuth", "Bootstrap"],
+    "img": "/photos/cle.jpg"
   },
   {
     "name": "Twitter Topic ML Modeling",
     "description": "Cleaned tweet data using NLTK and applied matrix factorization to model consumer sentiment across 100k+ tweets. Visualized and ranked 500+ themes using NumPy and pandas.",
-    "date": "Nov - Dec 2024",
-    "link": "",
-    "techStack": ["Python", "pandas", "NumPy", "scikit", "Jupyter", "NLTK"]
+    "date": "Nov - Dec 2023",
+    "link": "none",
+    "techStack": ["Python", "pandas", "NumPy", "scikit", "Jupyter", "NLTK"],
+    "img": ""
   },
   {
     "name": "Proposed Drone Fleet Management System - Project Management",
     "description": "Led an Agile development cycle for a drone system to monitor windmills. Created architecture, wireframes, and backlog. Focused on reducing maintenance downtime and improving stakeholder usability.",
-    "date": "Mar - May 2023",
-    "link": "",
-    "techStack": ["Azure DevOps", "Agile"]
+    "date": "Mar - May 2024",
+    "link": "none",
+    "techStack": ["Azure DevOps", "Agile"],
+    "img": ""
   },
   {
     "name": "Seam Carving - Dijkstra’s Algorithm",
     "description": "Implemented Dijkstra’s Algorithm to perform seam carving for image compression. Optimized traversal logic for performance. Maintained code quality and version accuracy with Git.",
-    "date": "May - June 2022",
-    "link": "",
-    "techStack": ["Java", "Dijkstra’s Algorithm", "Git"]
+    "date": "May - June 2023",
+    "link": "none",
+    "techStack": ["Java", "Dijkstra’s Algorithm", "Git"],
+    "img": ""
   },
   {
     "name": "Gender Pay Gap - Data Analysis",
     "description": "Used R and ggplot2 to analyze and visualize gender pay disparities. Shared insights with 100+ students. Ensured statistical confidence and persuasive data storytelling.",
-    "date": "May - June 2021",
-    "link": "",
-    "techStack": ["R", "ggplot2", "data storytelling", "technical communication"]
+    "date": "May - June 2022",
+    "link": "https://info201b-2022-spring.github.io/final-projects-gwenfuri2/",
+    "techStack": ["R", "ggplot2", "plotly"],
+    "img": "/photos/genderPayGap.png"
   }
 ]

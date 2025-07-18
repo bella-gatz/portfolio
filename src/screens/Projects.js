@@ -11,18 +11,35 @@ function Projects() {
     }, []);
 
     return (
-        <div>
-            <h2 class="m-3">Some of my projects</h2>
-            <div class="card-deck">
+        <div className="m-3">
+            <h2>Some of my projects</h2>
+            <div className="accordion" id="accordionParent">
             {projects.map((project, idx) => (
-                <div class="card m-3 w-50" key={idx} className="project"> 
-                    <img class="card-img-top w-25" src={project.img} alt="Card img"/>
-                    <div class="card-body">
-                        <h3 class="card-title">{project.name}</h3>
-                        <p class="card-subtitle mb-2 text-muted">{project.date}</p>
-                        <p class="card-text">{project.description}</p>
-                        <a class="card-link" href={project.link}>Link</a> 
-                        {/* TODO: add check for links (some are empty) */}
+                <div className="accordion-item" key={idx}> 
+                    <h3 className="accordion-header" id={`heading${project.id}`}>
+                        <button 
+                            className="accordion-button collapsed" 
+                            type="button" 
+                            data-bs-toggle="collapse"
+                            data-bs-target={`#collapse${project.id}`} 
+                            aria-expanded="false" 
+                            aria-controls={`collapse${project.id}`}
+                        >
+                            {project.name}
+                        </button>  
+                    </h3>
+                    <div 
+                        id={`collapse${project.id}`} 
+                        className="accordion-collapse collapse" 
+                        data-bs-parent="#accordionParent"
+                        aria-labelledby={`heading${project.id}`}
+                    >
+                        <div className="accordion-body m-3">
+                            <img className="card-img-top w-25" src={project.img} alt="Card img"/>
+                            <p className="card-subtitle mb-2 text-muted">{project.date}</p>
+                            <p className="card-text">{project.description}</p>
+                            <a className="card-link" href={project.link}>Link</a> 
+                        </div>
                     </div>
                 </div>
             ))}

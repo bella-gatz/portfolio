@@ -4,6 +4,7 @@ import {BrowserRouter as Router, Route, Routes, Link} from 'react-router-dom';
 import Home from "./screens/Home";
 import Projects from "./screens/Projects";
 import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/js/bootstrap.bundle.min.js';
 
 // import Resume from "./screens/Resume";
 // import Feedback from "./screens/Feedback";
@@ -14,10 +15,10 @@ function App() {
       <div>
         <nav className="navbar navbar-expand-lg bg-body-tertiary">
           <div className="container-fluid">
-            <Link className="navbar-brand" to="/">Bella Gatzemeier</Link>
+            <Link className="navbar-brand" to="/">BG</Link>
       
             <div className='nav-item'> 
-              <Link className="nav-link active" to="/projects">Projects</Link>
+              {/* <Link className="nav-link active" to="/projects">Projects</Link> */}
             </div>
           </div>
               {/* <Link to="/resume">Resume</Link> */}

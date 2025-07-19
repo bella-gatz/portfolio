@@ -12,33 +12,55 @@ function Projects() {
 
     return (
         <div className="m-3">
-            <h2>Some of my projects</h2>
-            <div className="accordion" id="accordionParent">
-            {projects.map((project, idx) => (
-                <div className="accordion-item" key={idx}> 
-                    <h3 className="accordion-header" id={`heading${project.id}`}>
+            <h2>Some of my projects:</h2>
+            <div className="accordion w-50" id="accordionParent">
+            {projects.map((project, index) => (
+                <div className="accordion-item" key={index}> 
+                    <h3 className="accordion-header" id={`heading${index}`}>
                         <button 
                             className="accordion-button collapsed" 
                             type="button" 
                             data-bs-toggle="collapse"
-                            data-bs-target={`#collapse${project.id}`} 
+                            data-bs-target={`#collapse${index}`} 
                             aria-expanded="false" 
-                            aria-controls={`collapse${project.id}`}
+                            aria-controls={`collapse${index}`}
                         >
                             {project.name}
                         </button>  
                     </h3>
                     <div 
-                        id={`collapse${project.id}`} 
+                        id={`collapse${index}`} 
                         className="accordion-collapse collapse" 
                         data-bs-parent="#accordionParent"
-                        aria-labelledby={`heading${project.id}`}
+                        aria-labelledby={`heading${index}`}
                     >
                         <div className="accordion-body m-3">
-                            <img className="card-img-top w-25" src={project.img} alt="Card img"/>
+                            <div id={`carouselImages${index}`} className="carousel slide">
+                                <div className="carousel-inner">
+                                    {Array.isArray(project.imgs) && project.imgs.length > 0 ? (
+                                    project.imgs.map((img, imgIndex) => (
+                                        <div className={`carousel-item ${imgIndex === 0 ? 'active' : ''}`} key={imgIndex}>
+                                            <img src={img} className="d-block w-100" alt={`Slide ${imgIndex} for ${project.name} project. Adding more descriptive alt tags soon!`}/>
+                                        </div>   
+                                    ))
+                                    ) : (
+                                        <div className={'carousel-item active'}>
+                                            <img src="" className="d-block w-100" alt="Nothing to see here"/>
+                                        </div>   
+                                    )}
+                                </div>
+                                <button className="carousel-control-prev" type="button" data-bs-target={`#carouselImages${index}`} data-bs-slide="prev">
+                                    <span className="carousel-control-prev-icon" aria-hidden="true"></span>
+                                    <span className="visually-hidden">Previous</span>
+                                </button>
+                                <button className="carousel-control-next" type="button" data-bs-target={`#carouselImages${index}`} data-bs-slide="next">
+                                    <span className="carousel-control-next-icon" aria-hidden="true"></span>
+                                    <span className="visually-hidden">Next</span>
+                                </button>
+                            </div>
                             <p className="card-subtitle mb-2 text-muted">{project.date}</p>
                             <p className="card-text">{project.description}</p>
-                            <a className="card-link" href={project.link}>Link</a> 
+                            {project.link && <a className="card-link" href={project.link}>Link</a>}
                         </div>
                     </div>
                 </div>
